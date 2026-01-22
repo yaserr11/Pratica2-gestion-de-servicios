@@ -1,0 +1,11 @@
+[Unit]
+Description=MkDocs Notas
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/vboxuser/.local/bin/mkdocs serve -f /home/vboxuser/.local/bin/mkdocspro/mkdocs.yml
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
